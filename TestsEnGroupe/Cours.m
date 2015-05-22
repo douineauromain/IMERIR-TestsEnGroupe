@@ -10,7 +10,28 @@
 
 @implementation Cours
 
+- (instancetype)initWithName:(NSString*)name
+{
+    self = [super init];
+    if (self != nil) {
+        self.name = name;
+    }
+    return self;
+}
 
+-(void) addEleve:(Eleve*)eleve{
+    if(eleve.nom != nil && eleve.prenom != nil)
+        [self.listEleves insertObject:eleve atIndex:[self countEleves]];
+}
+
+-(void) removeEleveAtIndex:(NSInteger)index {
+    if(index >= 0 && index <= [self countEleves])
+        [self.listEleves removeObjectAtIndex:index];
+}
+
+-(NSInteger) countEleves{
+    return (NSInteger)[self.listEleves count];
+}
 
 
 @end

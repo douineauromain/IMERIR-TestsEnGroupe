@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Eleve.h"
 
 @interface Cours : NSObject
 
-@property (strong) NSString *nom;
+@property (strong) NSString *name;
+@property (strong) NSMutableArray *listEleves;
 
 @end

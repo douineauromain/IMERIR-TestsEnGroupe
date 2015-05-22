@@ -13,6 +13,4 @@
 @property (strong) NSString *nom;
 @property (strong) NSString *prenom;
 
-@property (strong) NSArray *listNote;
-
 @end
