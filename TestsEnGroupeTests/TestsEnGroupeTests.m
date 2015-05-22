@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "Eleve.h"
+#import "Note.h"
+#import "Cours.h"
 
 @interface TestsEnGroupeTests : XCTestCase
 
@@ -31,16 +33,19 @@
 //Eleve
 - (void)testEleveInitPrenom{
     Eleve *eleve = [[Eleve alloc] init];
-    XCTAssertNotNil(eleve.prenom);
+    XCTAssertNotNil(eleve.firstName);
 }
 
-- (void)testEleveInitNom{
-    Eleve *eleve = [[Eleve alloc] init];
-    XCTAssertNotNil(eleve.nom);
+- (void)testEleveInitPrenom2{
+    Eleve *eleve = [[Eleve alloc] initWithName:@"DOUINEL" andFirstName:@"Romain"];
+    XCTAssertNotNil(eleve.firstName);
+    XCTAssertNotNil(eleve.name);
 }
 
-- (void)testEleveNote{
-        
+- (void)testNoteCour{
+    Cours *cours = [[Cours alloc] initWithName:@"iOS"];
+    Note *note = [[Note alloc] initWithCours:cours];
+    XCTAssertNotNil(note.cours);
 }
 
 
