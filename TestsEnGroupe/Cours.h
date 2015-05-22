@@ -14,4 +14,6 @@
 @property (strong) NSString *name;
 @property (strong) NSMutableArray *listEleves;
 
+- (instancetype)initWithName:(NSString*)name;
+
 @end

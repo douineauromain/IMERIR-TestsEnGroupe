@@ -13,4 +13,6 @@
 @property (strong) NSString *nom;
 @property (strong) NSString *prenom;
 
+- (instancetype)initWithName:nom andFirstName:prenom;
+
 @end
