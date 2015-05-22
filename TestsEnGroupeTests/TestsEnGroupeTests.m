@@ -42,10 +42,15 @@
     XCTAssertNotNil(eleve.name);
 }
 
-- (void)testNoteCour{
+- (void)testCoursEleve{
     Cours *cours = [[Cours alloc] initWithName:@"iOS"];
-    Note *note = [[Note alloc] initWithCours:cours];
-    XCTAssertNotNil(note.cours);
+    Eleve *eleve = [[Eleve alloc] initWithName:@"DOUINEL" andFirstName:@"Romain"];
+    [cours addEleve:eleve];
+    XCTAssertNotNil([cours eleves]);
+}
+
+- (void)testEleveNote{
+    
 }
 
 
